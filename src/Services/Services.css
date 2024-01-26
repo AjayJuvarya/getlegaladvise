@@ -1,0 +1,48 @@
+.textContainer{
+    text-align: center;
+}
+
+.line{
+    color: black;
+    width: 125px;
+    margin-left: 45%;
+    border-width: 1px;
+}
+
+.textdesc{
+    margin-top: 10px;
+}
+
+.servContainer{
+}
+
+.column {
+    float: left;
+    width: 24%;
+    padding: 25px;
+    margin-bottom: 2%;
+    margin-left: 4%;
+    transition:  0.3s;
+    box-shadow: 10px 10px 5px 1px lightblue;    
+    text-align: center;
+  }
+
+  .column:hover{
+    cursor: pointer;
+    box-shadow: 10px 10px 5px 1px black;    
+  }
+  
+  /* Clearfix (clear floats) */
+  /* .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  } */
+
+  .row{
+    margin-top: 25px;
+    /* display: block; */
+    margin-left: 10%;
+    margin-right: 14%;
+    background-color: red;
+  }

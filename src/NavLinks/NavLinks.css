@@ -1,0 +1,27 @@
+.mainContainer{
+    flex: 1;
+}
+
+.linksContainer{
+    margin-left: 45%;
+    width: 60%;
+    float: left;
+}
+
+.home:active {
+    color: red;
+}
+
+.home,.about,.services,.contact{
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+
+.icons{
+    margin-left: 3%;
+}
+
+.iconsContainer{
+    margin-left: 3%;
+}

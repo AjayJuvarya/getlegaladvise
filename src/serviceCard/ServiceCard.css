@@ -1,0 +1,27 @@
+
+
+.cardContainer:hover {
+    transform: scale(1.05);
+}
+
+.name{
+text-decoration: none;
+color: black;
+}
+
+.image{
+    height: 200px;
+    width: 250px;
+}
+
+.column1{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .column1{
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+} */
