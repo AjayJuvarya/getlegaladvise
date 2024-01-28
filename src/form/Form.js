@@ -15,7 +15,7 @@ function Form() {
   });
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("Subject");
-  const [message, setMessage] = useState("HEllo this is message");
+  const [message, setMessage] = useState();
   console.log("email", email);
   console.log("Subject", subject);
   console.log("message", message);
@@ -25,30 +25,24 @@ function Form() {
     setMessage(values);
   };
 
-  const baseurl = "http://localhost:8000";
-
-  const sendMail = async (event) => {
-    let sendData = {
-      email: email,
-      subject: subject,
-      message: message,
-    };
-
+  const handleSubmit = (event) => {
     event.preventDefault();
 
-    const res = await fetch(`${baseurl}/email/sendEmail`, {
-      method: "POST",
-      body: JSON.stringify(sendData),
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    }).then((res) => {
-      console.log(res);
-      if (res.status > 199 && res.status < 300) {
-        alert("Send Succesfully");
-      }
-    });
+    axios
+      .get("http://localhost:5000/sendform", {
+        params: {
+          email,
+          subject,
+          message,
+        },
+      })
+      .then(() => {
+        alert("Success");
+      })
+      .then((response) => console.log("response", response))
+      .catch(() => {
+        alert("Failure");
+      });
   };
 
   return (
@@ -69,7 +63,7 @@ function Form() {
         >
           <form
             style={{ display: "flex", flexDirection: "column" }}
-            onSubmit={sendMail}
+            onSubmit={handleSubmit}
           >
             <label>Name:</label>
             <input
