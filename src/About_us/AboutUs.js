@@ -3,6 +3,7 @@ import Person_1 from "../assets/SA_Naidu.jpg";
 import "./About.css";
 import Person_2 from "../assets/shanmukh_rao.jpg";
 import Person_3 from "../assets/Krishna_rao.jpg";
+import Person_4 from "../assets/sridevi_advocate.jpg";
 import legal_service from "../assets/legal_service.png";
 
 function AboutUs() {
@@ -41,6 +42,17 @@ function AboutUs() {
               in Chitfund, Labour Laws, Municipal Laws.
             </p>
           </div>
+        </div>
+        <div className="card1">
+          <div className="aboutPersonCard2">
+            <h3 className="personName1">Smt D.Sridevi</h3>
+            <p className="aboutPerson1">
+              Top Criminal Advocate with more then 20 years of experience in all
+              kinds criminal cases including cases under NDPS Act, POSCO Art, SC
+              & ST Act.
+            </p>
+          </div>
+          <img src={Person_4} className="person_2" />
         </div>
       </div>
     </div>

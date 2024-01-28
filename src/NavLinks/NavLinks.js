@@ -18,9 +18,6 @@ function NavLinks() {
         <Link to="services" className="services">
           Services
         </Link>
-        <Link to="contact" className="contact">
-          Contact Us
-        </Link>
       </div>
       {/* <div className="iconsContainer">
         <FaFacebookF color="white" className="icons" />

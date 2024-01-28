@@ -18,6 +18,8 @@ import Agreements from "./agreements/Agreements";
 import DraftingDocuments from "./drafting_of_documents/DraftingDocuments";
 import LegalOpinions from "./legal_ipinions/LegalOpinions";
 import Form from "./form/Form";
+import Privacy from "./Privacy";
+import Terms from "./Terms";
 
 function App() {
   return (
@@ -25,7 +27,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutUs />} />
+        {/* <Route path="/about" element={<AboutUs />} /> */}
         <Route path="/services" element={<Services />} />
         <Route path="/services/moneyrecovery" element={<MoneyRecovery />} />
         <Route path="/services/familydisputes" element={<FamilyDisputes />} />
@@ -44,6 +46,8 @@ function App() {
         <Route path="/services/legalopinions" element={<LegalOpinions />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/fillform" element={<Form />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="/terms-and-condtions" element={<Terms />} />
       </Routes>
       {/* <Footer /> */}
     </div>

@@ -1,5 +1,15 @@
 .footerContainer{
-    height: 300px;
+    height: 400px;
     background-color: #3F3F3F;
+}
+
+.privacy{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.privacy:hover {
+    text-decoration: underline;
 }
 

@@ -3,6 +3,7 @@ import Home_image from "../assets/Home_Image.jpg";
 import "./Home.css";
 import Footer from "../footer/Footer";
 import AboutUs from "../About_us/AboutUs";
+import Address from "../addressComponent/Address";
 
 function Home() {
   return (
@@ -17,7 +18,9 @@ function Home() {
       <div>
         <AboutUs />
       </div>
-
+      <div>
+        <Address />
+      </div>
       <Footer />
     </div>
   );

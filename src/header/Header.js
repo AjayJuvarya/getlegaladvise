@@ -3,6 +3,7 @@ import "./Header.css";
 import NavLinks from "../NavLinks/NavLinks";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
+import logo from "../assets/conquer_legal_solutions.png";
 
 function Header() {
   return (
@@ -23,6 +24,12 @@ function Header() {
         </h5>
       </div>
       <div className="logoContainer">
+        <img
+          src={logo}
+          height={100}
+          width={350}
+          style={{ marginTop: 10, position: "absolute" }}
+        />
         <h2 className="logoName">Getlegaladvise</h2>
         <NavLinks />
       </div>
