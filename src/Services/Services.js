@@ -9,7 +9,7 @@ import partion_issues from "../assets/property_issues.jpg";
 import land_record_and_title_search from "../assets/land_record_and _title_search.jpg";
 import agreements from "../assets/Agreements.jpg";
 import drafting_of_documents from "../assets/drafting_of_deeds_documentation.jpg";
-import legal_opinions from "../assets/legal_opinions.jpeg";
+import legal_opinions from "../assets/legal_opinions.jpg";
 
 function Services() {
   return (
