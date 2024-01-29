@@ -13,33 +13,34 @@ function Form() {
     service: "",
     comments: "",
   });
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("ajaynithin6@gmail.com");
   const [subject, setSubject] = useState("Subject");
-  const [message, setMessage] = useState();
+  const [message, setMessage] = useState("");
   console.log("email", email);
   console.log("Subject", subject);
   console.log("message", message);
 
   const handleChange = (event) => {
     setValues({ ...values, [event.target.name]: [event.target.value] });
-    setMessage(values);
+    JSON.stringify(setMessage(values));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    axios
-      .get("http://localhost:5000/sendform", {
-        params: {
-          email,
-          subject,
-          message,
-        },
-      })
-      .then(() => {
-        alert("Success");
-      })
-      .then((response) => console.log("response", response))
+    fetch("http://localhost:5000/sendform", {
+      method: "POST",
+      body: {
+        email: email,
+        subject: subject,
+        message: message,
+      },
+      headers: {
+        Accept: "application.json",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => console.log("success"))
       .catch(() => {
         alert("Failure");
       });
