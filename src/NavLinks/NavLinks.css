@@ -17,6 +17,9 @@
     text-decoration: none;
 }
 
+.bars{
+    display: none;
+}
 
 .icons{
     margin-left: 3%;
@@ -24,4 +27,14 @@
 
 .iconsContainer{
     margin-left: 3%;
+}
+
+@media screen and (max-width:376px) {
+    .bars {
+        display: block;
+    }
+
+    .home,.services{
+        display: none;
+    }
 }

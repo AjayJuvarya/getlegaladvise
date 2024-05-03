@@ -4,11 +4,13 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { FaBars } from "react-icons/fa6";
 
 function NavLinks() {
   return (
     <div className="mainContainer">
       <div className="linksContainer">
+        <FaBars className="bars" />
         <Link to="/" className="home">
           Home
         </Link>

@@ -13,37 +13,28 @@ function Form() {
     service: "",
     comments: "",
   });
-  const [email, setEmail] = useState("ajaynithin6@gmail.com");
+  const [email, setEmail] = useState(" ");
   const [subject, setSubject] = useState("Subject");
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState(" ");
   console.log("email", email);
   console.log("Subject", subject);
   console.log("message", message);
 
   const handleChange = (event) => {
     setValues({ ...values, [event.target.name]: [event.target.value] });
-    JSON.stringify(setMessage(values));
+    setMessage(values);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event, values) => {
     event.preventDefault();
 
-    fetch("http://localhost:5000/sendform", {
-      method: "POST",
-      body: {
-        email: email,
-        subject: subject,
-        message: message,
-      },
-      headers: {
-        Accept: "application.json",
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => console.log("success"))
+    axios
+      .post("https://getlegaladvise.onrender.com/sendform", values)
+      .then((response) => console.log(response, "Success"))
       .catch(() => {
         alert("Failure");
       });
+    console.log("Clicked");
   };
 
   return (
