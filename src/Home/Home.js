@@ -4,7 +4,6 @@ import "./Home.css";
 import Footer from "../footer/Footer";
 import AboutUs from "../About_us/AboutUs";
 import Address from "../addressComponent/Address";
-import GoogleAds from "../adsense/GoogleAds";
 
 function Home() {
   return (
@@ -23,7 +22,6 @@ function Home() {
         <Address />
       </div>
       <Footer />
-      <GoogleAds />
     </div>
   );
 }
